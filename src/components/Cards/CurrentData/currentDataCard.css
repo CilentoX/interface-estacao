@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* Estilo global */
+body {
+  font-family: "Poppins", sans-serif; /* Aplicar a fonte globalmente */
+  margin: 0;
+  padding: 0;
+  background-color: #eaeaea; /* Exemplo de fundo para a página */
+}
+
+/* Estilos do card principal */
+.main-card {
+  background-color: #f1f7ff;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-card img {
+  width: 50px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.main-card h2 {
+  margin: 10px 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.main-card h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #666;
+}
+
+/* Container para os cards de dados */
+.data-cards-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os cards se movam para a linha seguinte */
+  justify-content: center; /* Centraliza os cards horizontalmente */
+  margin-top: 20px; /* Espaçamento acima dos cards */
+}
+
+/* Estilos dos cards menores */
+.data-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  width: 200px; /* Largura fixa para os cards */
+}
+
+/* Imagens dos cards */
+.data-card img {
+  width: 50px;
+  height: 50px;
+}
+
+.data-card h4 {
+  margin: 5px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.data-card p {
+  margin: 0;
+  font-size: 16px;
+  color: #666;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .data-card {
+    width: calc(50% - 20px); /* 2 colunas com espaçamento */
+  }
+}
+
+@media (max-width: 480px) {
+  .data-card {
+    width: calc(100% - 20px); /* 1 coluna em dispositivos muito pequenos */
+  }
+}

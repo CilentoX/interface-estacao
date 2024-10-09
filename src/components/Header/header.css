@@ -1,0 +1,142 @@
+/* header.css */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+.header-container {
+  width: 100%;
+  background-color: #fcfcfc;
+  border-bottom: 1px solid #7978783a;
+  font-family: "Poppins", sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.logo-link {
+  flex-shrink: 0;
+}
+
+.header-logo {
+  width: 100px;
+  height: auto;
+  display: block;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: rgb(34, 34, 36);
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.header-nav a:hover {
+  color: #0066cc;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+  }
+
+  .header-content-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .hamburger {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: rgb(34, 34, 36);
+    position: relative;
+    transition: all 0.3s;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background: rgb(34, 34, 36);
+    left: 0;
+    transition: all 0.3s;
+  }
+
+  .hamburger::before {
+    top: -8px;
+  }
+
+  .hamburger::after {
+    bottom: -8px;
+  }
+
+  .menu-toggle[aria-expanded="true"] .hamburger,
+  .menu-toggle[aria-expanded="true"] .hamburger::before,
+  .menu-toggle[aria-expanded="true"] .hamburger::after {
+    display: none;
+  }
+
+  .menu-toggle[aria-expanded="true"]::before {
+    content: "✕";
+    font-size: 24px;
+    color: rgb(34, 34, 36);
+  }
+
+  .header-nav {
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 0;
+    gap: 1rem;
+    background-color: #fcfcfc;
+    display: none;
+  }
+
+  .header-nav.is-open {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-logo {
+    width: 80px;
+  }
+}
